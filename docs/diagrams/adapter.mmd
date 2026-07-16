@@ -1,0 +1,14 @@
+classDiagram
+    class CelsiusSensor {
+        <<interface>>
+        +readC() double
+    }
+    class FahrenheitSensor {
+        +readF() double
+    }
+    class Adapter {
+        -FahrenheitSensor s
+        +readC() double
+    }
+    Adapter ..|> CelsiusSensor
+    Adapter *-- FahrenheitSensor : adapts

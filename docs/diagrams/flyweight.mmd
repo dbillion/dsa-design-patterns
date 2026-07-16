@@ -1,0 +1,12 @@
+classDiagram
+    class Glyph { +char c }
+    class GlyphFactory {
+        -Map cache
+        +get(char) Glyph
+    }
+    class Text {
+        +List~Glyph~ glyphs
+        +distinctCount() int
+    }
+    GlyphFactory ..> Glyph : shares
+    Text o-- Glyph

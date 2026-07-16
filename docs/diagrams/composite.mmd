@@ -1,0 +1,12 @@
+classDiagram
+    Node <|-- File
+    Node <|-- Directory
+    class Node {
+        <<sealed interface>>
+        +size() int
+    }
+    class Directory {
+        +List~Node~ children
+        +add(Node)
+    }
+    Directory o-- Node : tree

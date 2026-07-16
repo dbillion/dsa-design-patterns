@@ -1,0 +1,8 @@
+classDiagram
+    Expr <|-- Var
+    Expr <|-- And
+    class Expr {
+        <<sealed interface>>
+        +eval(ctx) boolean
+    }
+    And *-- Expr : left/right

@@ -1,0 +1,8 @@
+classDiagram
+    Image <|-- RealImage
+    Image <|-- ProxyImage
+    class Image {
+        <<interface>>
+        +render() String
+    }
+    ProxyImage *-- RealImage : lazy loads

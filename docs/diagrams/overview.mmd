@@ -1,0 +1,33 @@
+graph TD
+    subgraph Creational["Creational (5)"]
+        C1[Singleton]
+        C2[Factory Method]
+        C3[Abstract Factory]
+        C4[Builder]
+        C5[Prototype]
+    end
+    subgraph Structural["Structural (7)"]
+        S1[Adapter]
+        S2[Bridge]
+        S3[Composite]
+        S4[Decorator]
+        S5[Facade]
+        S6[Flyweight]
+        S7[Proxy]
+    end
+    subgraph Behavioral["Behavioral (11)"]
+        B1[Chain of Responsibility]
+        B2[Command]
+        B3[Interpreter]
+        B4[Iterator]
+        B5[Mediator]
+        B6[Memento]
+        B7[Observer]
+        B8[State]
+        B9[Strategy]
+        B10[Template Method]
+        B11[Visitor]
+    end
+    Client[Developer / Tests] --> Creational
+    Client --> Structural
+    Client --> Behavioral

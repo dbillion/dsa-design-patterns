@@ -1,0 +1,15 @@
+classDiagram
+    class Email {
+        +String to
+        +String subject
+        +String body
+        +List~String~ cc
+    }
+    class Builder {
+        +to(String) Builder
+        +subject(String) Builder
+        +body(String) Builder
+        +cc(String) Builder
+        +build() Email
+    }
+    Builder ..> Email : constructs immutable

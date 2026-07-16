@@ -1,0 +1,7 @@
+classDiagram
+    class Subject {
+        -List~Consumer~String~~ subs
+        +subscribe(Consumer)
+        +publish(String)
+    }
+    note for Subject "Observer: subscribers notified on publish"

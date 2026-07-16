@@ -1,0 +1,13 @@
+classDiagram
+    class HomeTheater {
+        -Dvd dvd
+        -Amp amp
+        -Lights lights
+        +watch() List~String~
+    }
+    class Dvd { +on() String }
+    class Amp { +on() String }
+    class Lights { +dim() String }
+    HomeTheater --> Dvd
+    HomeTheater --> Amp
+    HomeTheater --> Lights

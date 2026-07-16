@@ -1,0 +1,13 @@
+classDiagram
+    Shape <|-- Circle
+    Shape <|-- Rect
+    class Shape {
+        <<sealed interface>>
+        +accept(Visitor) String
+    }
+    class Visitor {
+        <<interface>>
+        +visit(Circle) String
+        +visit(Rect) String
+    }
+    Shape ..> Visitor : double dispatch

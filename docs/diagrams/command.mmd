@@ -1,0 +1,9 @@
+classDiagram
+    class Editor {
+        -StringBuilder sb
+        -Deque~Runnable~ undoStack
+        +execute(String)
+        +undo()
+    }
+    class CommandDemo
+    note for Editor "Command + undo via stored Runnables"

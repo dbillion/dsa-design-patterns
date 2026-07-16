@@ -1,0 +1,12 @@
+classDiagram
+    GUIFactory <|-- WinFactory
+    GUIFactory <|-- MacFactory
+    class GUIFactory {
+        <<sealed interface>>
+        +createButton() Button
+        +createCheckbox() Checkbox
+    }
+    class Button { +String label }
+    class Checkbox { +String label }
+    GUIFactory ..> Button
+    GUIFactory ..> Checkbox

@@ -1,0 +1,12 @@
+classDiagram
+    class Shape {
+        +Point p
+        +String color
+        +cloneAt(Point) Shape
+    }
+    class Point {
+        +int x
+        +int y
+    }
+    Shape *-- Point : owns
+    note for Shape "Prototype: clone with copied state, new position"

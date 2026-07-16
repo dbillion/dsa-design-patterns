@@ -1,0 +1,14 @@
+classDiagram
+    Renderer <|-- VectorRenderer
+    Renderer <|-- RasterRenderer
+    class Renderer {
+        <<interface>>
+        +render(shape, color) String
+    }
+    class Shape {
+        +name
+        +Renderer r
+        +color
+        +draw() String
+    }
+    Shape *-- Renderer : bridge

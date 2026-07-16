@@ -1,0 +1,16 @@
+classDiagram
+    Shape <|-- Circle
+    Shape <|-- Square
+    class Shape {
+        <<sealed interface>>
+    }
+    class Circle {
+        +double r
+    }
+    class Square {
+        +double s
+    }
+    class FactoryMethodDemo {
+        +create(kind, v) Shape
+    }
+    FactoryMethodDemo ..> Shape : produces

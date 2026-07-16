@@ -1,0 +1,9 @@
+classDiagram
+    State <|-- Idle
+    State <|-- HasCoin
+    class State {
+        <<sealed interface>>
+        +insert() State
+        +label() String
+    }
+    note for State "State: transition returns next state"

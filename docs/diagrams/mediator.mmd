@@ -1,0 +1,6 @@
+classDiagram
+    class ChatRoom {
+        -List~String~ log
+        +send(from, msg)
+    }
+    note for ChatRoom "Mediator: central hub broadcasts to all"

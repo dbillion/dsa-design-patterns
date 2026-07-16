@@ -1,0 +1,11 @@
+classDiagram
+    Coffee <|-- Basic
+    Coffee <|-- WithMilk
+    Coffee <|-- WithSugar
+    class Coffee {
+        <<interface>>
+        +desc() String
+        +cost() int
+    }
+    WithMilk *-- Coffee : wraps
+    WithSugar *-- Coffee : wraps

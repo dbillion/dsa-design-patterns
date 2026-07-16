@@ -1,0 +1,9 @@
+classDiagram
+    Beverage <|-- Tea
+    Beverage <|-- Coffee
+    class Beverage {
+        <<abstract>>
+        +make() String
+        #brew() String
+    }
+    note for Beverage "Template: make() fixed, brew() abstract"

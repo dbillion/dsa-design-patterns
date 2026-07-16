@@ -1,0 +1,9 @@
+classDiagram
+    Handler <|-- Info
+    Handler <|-- Warn
+    Handler <|-- Error
+    class Handler {
+        <<sealed interface>>
+        +handle(level, msg) Optional~String~
+    }
+    note for Handler "Chain: try each in order, first match wins"
